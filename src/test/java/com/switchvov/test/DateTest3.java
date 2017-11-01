@@ -1,16 +1,12 @@
 package com.switchvov.test;
 
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 import org.junit.Test;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.Iterator;
 
 /**
  * Created by jap on 2017/7/7.
@@ -26,8 +22,8 @@ public class DateTest3 {
                 break;
             }
             Date addDays = DateUtils.addDays(startDate,1);
-            // genCandidateSource(dateFormat1, dateFormat2, startDate, addDays);
-            genCandidateCount(dateFormat1, dateFormat2, startDate, addDays);
+            genCandidateSource(dateFormat1, dateFormat2, startDate, addDays);
+            // genCandidateCount(dateFormat1, dateFormat2, startDate, addDays);
             startDate = addDays;
         }
     }
@@ -68,6 +64,7 @@ public class DateTest3 {
         builder.append(dateFormat2.format(startDate));
         builder.append(" 00:00:00' created,\n");
         builder.append("'00000000-0000-0000-0000-000000000002' creator \n");
+        builder.append("union_id \n");
         builder.append("from tbd_resume\n");
         builder.append("where source_created >= '");
         builder.append(dateFormat2.format(startDate));
