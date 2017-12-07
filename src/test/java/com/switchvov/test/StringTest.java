@@ -26,4 +26,11 @@ public class StringTest {
         String[] split = str.split(",");
         Arrays.asList(split).forEach(System.out::println);
     }
+
+    @Test
+    public void test1() {
+        String str = "http://bazapic.oss-cn-shenzhen.aliyuncs.com/user-avatar/11924_1503035045695.jpg";
+        System.out.println(str.substring(str.lastIndexOf(".") + 1));
+        System.out.println(str.substring(str.lastIndexOf("/") + 1));
+    }
 }
