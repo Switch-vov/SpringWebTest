@@ -56,8 +56,12 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.33</version>
         </dependency>
+        <dependency>
+            <groupId>com.eaio.uuid</groupId>
+            <artifactId>uuid</artifactId>
+            <version>3.2</version>
+        </dependency>
     </dependencies>
-
     <build>
         <finalName>SpringWebTest</finalName>
         <plugins>
