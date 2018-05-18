@@ -1,0 +1,125 @@
+Orders
++ Id:string
++ TradingId:string (交易对象ID)
++ TransferId:string
++ SalerAccountId:string
++ BuyerAccountId:string
++ amount:decimal
++ status:byte (等待付款、付款完成、付款失败、交易完成、等待退款、退款失败、退款完成)
++ remark:string (JSON，备注失败原因)
++ transaction_id:string (支付系统流水号)
++ created:datetime
++ creator_id:string
++ updated:datetime
++ updater_id:string
+
+order_logs
++ id:int
++ order_id:string
++ status:byte
++ created:datetime
++ creator_id:string
+
+order_refund_application
++ id:int
++ order_id:string
++ transfer_id:string
++ saler_account_id:string
++ buyer_account_id:string
++ amount:decimal
++ status:byte (未处理、处理中、失败、完成)
++ remark:string (备注失败原因)
++ created:datetime
++ CreatorId:string
++ Updated:datetime
++ UpdaterId:string
+
+order_refund_application_logs
++ id:int
++ application_id:string
++ status:byte
++ created:datetime
++ creator_id:string
+
+accounts
++ id:string
++ union_id:string
++ channel:string
++ amount:decimal
++ freeze_amount:decimal
++ created:datetime
++ creator_id:string
++ updated:datetime
++ updater_id:string
+
+account_logs
++ id:int
++ transfer_id:string
++ account_id:string
++ amount:decimal
++ scene_type:byte (充值、付款、提现、退款)
++ scene_data:string (JSON)
++ from_account_id:string
++ to_account_id:string
++ created:datetime
++ creator_id:string
+
+merchant_accounts
++ id:string
++ channel:string
++ amount:decimal
++ freeze_amount:decimal
++ created:datetime
++ creator_id:string
++ updated:datetime
++ updater_id:string
+
+merchant_account_logs
++ Id:int
++ TransferId:string
++ AccountId:string
++ Amount:decimal
++ SceneType:byte (充值、付款、提现、退款)
++ SceneData:string (JSON)
++ FromAccountId:string
++ ToAccountId:string
++ Created:datetime
++ CreatorId:string
+
+transfers
++ id:string
++ trigger_account_id:string
++ amount:decimal
++ scene_type:byte (充值、付款、提现、退款)
++ scene_data:string (JSON)
++ status:byte (未完成、处理中、失败、完成)
++ created:datetime
++ creator_id:string
++ updated:datetime
++ updater_id:string
+
+transfer_logs
++ id:int
++ transfer_id:string
++ status:byte
++ created:datetime
++ creator_id:string
+
+withdraw_application
++ id:string
++ transfer_id:string
++ account_id:string
++ amount:decimal
++ status:byte (未完成、处理中、失败、完成)
++ remark:string (备注失败原因)
++ created:datetime
++ creator_id:string
++ updated:datetime
++ updater_id:string
+
+withdraw_logs
++ id:int
++ application_id:string
++ status:byte
++ created:datetime
++ creator_id:string

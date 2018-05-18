@@ -4,7 +4,7 @@ package com.switchvov.test;
  * Created by jap on 2017/6/30.
  */
 public class ParentClass {
-    static{
+    static {
         System.out.println("ParentClass init");
     }
 

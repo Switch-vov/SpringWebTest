@@ -12,8 +12,8 @@ import org.apache.commons.codec.binary.StringUtils;
 
 /**
  * 客户端与服务器通讯时对消息体加密和解密的工具类
- * @author LIUTAO
  *
+ * @author LIUTAO
  */
 public class Base64Test {
 
@@ -95,7 +95,8 @@ public class Base64Test {
 
     /**
      * BASE64解码
-     *   *
+     * *
+     *
      * @param info
      * @return
      */
@@ -105,6 +106,7 @@ public class Base64Test {
 
     /**
      * 先对消息体进行DES编码再进行BASE64编码
+     *
      * @param info
      * @return
      */
@@ -118,8 +120,10 @@ public class Base64Test {
         }
         return "";
     }
+
     /**
      * 先对消息体进行BASE64解码再进行DES解码
+     *
      * @param info
      * @return
      */

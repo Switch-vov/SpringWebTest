@@ -21,7 +21,7 @@ public class DateTest3 {
             if (startDate.after(new Date())) {
                 break;
             }
-            Date addDays = DateUtils.addDays(startDate,1);
+            Date addDays = DateUtils.addDays(startDate, 1);
             genCandidateSource(dateFormat1, dateFormat2, startDate, addDays);
             // genCandidateCount(dateFormat1, dateFormat2, startDate, addDays);
             startDate = addDays;

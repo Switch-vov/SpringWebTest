@@ -23,7 +23,7 @@ public final class StringList implements Serializable {
      * Serializes only the unparsed DN, for compactness and to avoid
      * any implementation dependency.
      *
-     * @serialData      The DN string
+     * @serialData The DN string
      */
     private void writeObject(ObjectOutputStream s) throws IOException {
         s.defaultWriteObject();

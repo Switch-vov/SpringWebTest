@@ -1,4 +1,5 @@
 package com.switchvov.util;
+
 import java.io.InputStream;
 import java.sql.Statement;
 import java.io.FileInputStream;
@@ -15,10 +16,8 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 /**
- *
  * @author Switch
  * @function 提供数据库访问方法
- *
  */
 public class SqlHelper {
     // 定义需要的变量

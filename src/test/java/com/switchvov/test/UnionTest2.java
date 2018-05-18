@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class UnionTest2 {
 
-    private Map<String , String> logs;
+    private Map<String, String> logs;
 
     @Before
     public void init() {
@@ -23,7 +23,7 @@ public class UnionTest2 {
                 String[] split = line.split(" ");
                 String userName = split[0];
                 String unionId = split[1];
-                logs.put(userName,unionId);
+                logs.put(userName, unionId);
                 line = br.readLine();
             }
         } catch (IOException e) {

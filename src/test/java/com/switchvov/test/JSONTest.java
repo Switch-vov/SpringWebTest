@@ -4,13 +4,10 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
-import java.awt.*;
 import java.util.*;
-import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.LongStream;
-import java.util.stream.Stream;
 
 public class JSONTest {
     @Test
@@ -57,6 +54,16 @@ public class JSONTest {
         System.out.println(response2);
         String resumeId = String.valueOf(response2.getData());
         System.out.println(resumeId);
+    }
+
+    @Test
+    public void testJSON4() {
+//        String s = JSON.toJSONString(Optional.empty());
+//        System.out.println(s);
+//        TBDResponse response = JSON.parseObject(s, TBDResponse.class);
+//        System.out.println(response);
+        TBDResponse response = JSON.parseObject("null", TBDResponse.class);
+        System.out.println(response);
     }
 }
 

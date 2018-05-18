@@ -13,7 +13,7 @@ public class UnionTest {
     private Set<String> numbers;
 
     // @Before
-    public void init() throws Exception{
+    public void init() throws Exception {
         numbers = new HashSet<>(6500);
         FileReader fr = new FileReader(new File("C:\\Users\\jap\\Desktop\\baza-numbers.txt"));
         BufferedReader br = new BufferedReader(fr);

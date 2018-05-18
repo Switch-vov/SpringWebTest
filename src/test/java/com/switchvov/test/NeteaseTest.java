@@ -13,22 +13,22 @@ public class NeteaseTest {
 
     private String appSecret = "f7a38c58bbcf";
 
-    public static long unixTime(){
+    public static long unixTime() {
         return System.currentTimeMillis() / 1000L;
     }
 
     @Test
-    public void getHttpHeaders(){
-        Map<String,String> headers = new LinkedHashMap<>();
+    public void getHttpHeaders() {
+        Map<String, String> headers = new LinkedHashMap<>();
         String appKey = this.appKey;
         String appSecret = this.appSecret;
         String nonce = RandomStringUtils.randomAlphanumeric(8);
         String curTime = String.valueOf(NeteaseTest.unixTime());
         String checkSum = DigestUtils.sha1Hex(appSecret + nonce + curTime);
-        headers.put("AppKey",appKey);
-        headers.put("Nonce",nonce);
-        headers.put("CurTime",curTime);
-        headers.put("CheckSum",checkSum);
+        headers.put("AppKey", appKey);
+        headers.put("Nonce", nonce);
+        headers.put("CurTime", curTime);
+        headers.put("CheckSum", checkSum);
         System.out.println(headers.toString());
     }
 

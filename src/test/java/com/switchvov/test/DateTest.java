@@ -3,6 +3,7 @@ package com.switchvov.test;
 import org.apache.commons.lang3.time.DateUtils;
 import org.junit.Test;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -28,7 +29,17 @@ public class DateTest {
         }
         cal.add(Calendar.DATE, offset - 7);
         System.out.println("last Sunday is : " + new SimpleDateFormat("yyyy-MM-dd").format(cal.getTime()));
-        cal.add(Calendar.DATE, - 28);
+        cal.add(Calendar.DATE, -28);
         System.out.println("last last Sunday is : " + new SimpleDateFormat("yyyy-MM-dd").format(cal.getTime()));
+    }
+
+    @Test
+    public void testParseDate() throws ParseException {
+        String s1 = "05/07/2018 16:03:14";
+        String s2 = "2018/5/9 16:06:50";
+        String[] patterns = {"MM/dd/yyyy HH:mm:ss", "yyyy/MM/dd HH:mm:ss"};
+        Date date1 = DateUtils.parseDate(s1, patterns);
+        Date date2 = DateUtils.parseDate(s2, patterns);
+        System.out.println();
     }
 }

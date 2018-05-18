@@ -3,8 +3,8 @@ package com.switchvov.test;
 /**
  * Created by jap on 2017/6/30.
  */
-public class ChildClass extends ParentClass{
-    static{
+public class ChildClass extends ParentClass {
+    static {
         System.out.println("ChildClass init");
     }
 

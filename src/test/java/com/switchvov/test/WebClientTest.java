@@ -31,6 +31,6 @@ public class WebClientTest {
         String fileName = responseEntity.getHeaders().get("Content-Disposition").get(0).split("=")[1];
         FileOutputStream fos = new FileOutputStream("E:\\" + fileName);
         ByteArrayInputStream bais = new ByteArrayInputStream(responseEntity.getBody());
-        FileCopyUtils.copy(bais,fos);
+        FileCopyUtils.copy(bais, fos);
     }
 }

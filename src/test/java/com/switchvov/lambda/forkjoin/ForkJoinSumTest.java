@@ -9,7 +9,7 @@ public class ForkJoinSumTest {
         long start = System.currentTimeMillis();
         System.out.println(forkJoinSum(1_000_000));
         long time = System.currentTimeMillis() - start;
-        System.out.println("ForkJoin sum done in: " + time + " msecs" );
+        System.out.println("ForkJoin sum done in: " + time + " msecs");
     }
 
 

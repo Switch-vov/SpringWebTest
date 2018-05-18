@@ -8,6 +8,6 @@ import org.junit.Test;
 public class TopTest {
     @Test
     public void testTop() {
-        System.out.println(100 -(int)Math.ceil(10*100.0D / 3923));
+        System.out.println(100 - (int) Math.ceil(10 * 100.0D / 3923));
     }
 }
